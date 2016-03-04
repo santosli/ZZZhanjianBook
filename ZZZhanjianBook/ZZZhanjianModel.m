@@ -10,11 +10,12 @@
 
 @implementation ZZZhanjianModel
 
-- (instancetype) initWithName:(NSString *)name {
+- (instancetype) initWithName:(NSString *)name id:(NSString *)zhanJianId {
     self = [super init];
     
     if (self) {
         _name = name;
+        _zhanJianId = zhanJianId;
     }
     
     return self;
@@ -22,7 +23,7 @@
 
 
 - (NSString *)description {
-    return _name;
+    return [NSString stringWithFormat:@"No.%@  %@", _zhanJianId, _name];
 }
 
 @end

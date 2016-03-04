@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSString *zhanJianId;
 @property (nonatomic, strong) NSString *name;
 
-- (instancetype) initWithName:(NSString *)name;
+- (instancetype) initWithName:(NSString *)name id:(NSString *)zhanJianId;
 
 - (NSString *)description;
 

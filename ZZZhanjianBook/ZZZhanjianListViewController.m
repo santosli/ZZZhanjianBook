@@ -8,6 +8,7 @@
 
 #import "ZZZhanjianListViewController.h"
 #import "ZZZhanjianModel.h"
+#import "ZZHTTPOperation.h"
 
 @interface ZZZhanjianListViewController ()
 
@@ -35,14 +36,29 @@
 - (void)getZhanJianList {
     _zhanJianList = [[NSMutableArray alloc] init];
     
-    ZZZhanjianModel *model1 = [[ZZZhanjianModel alloc] initWithName:@"01 胡德"];
-    ZZZhanjianModel *model2 = [[ZZZhanjianModel alloc] initWithName:@"02 声望"];
-
+    NSString *downloadListURL = @"http://1.zzzhanjian.applinzi.com/getZhanJianList";
     
+    [ZZHTTPOperation downloadWithURL:downloadListURL completion:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSDictionary *jsonDic = (NSDictionary*)responseObject;
+            NSDictionary *list = jsonDic[@"list"];
+            
+            NSArray *keys = [list allKeys];
+            NSArray *sortedArray = [keys sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+                return [obj1 compare:obj2 options:NSNumericSearch];
+            }];
+            
+            for (NSString *zhanJianId in sortedArray) {
+                NSLog(@"id: %@, name: %@", zhanJianId, [list objectForKey:zhanJianId]);
+                ZZZhanjianModel *model = [[ZZZhanjianModel alloc] initWithName:[list objectForKey:zhanJianId] id:zhanJianId];
+                [_zhanJianList addObject:model];
+            }
+            [[self tableView] reloadData];
+        }
+    }];
     
-    
-    [_zhanJianList addObject:model1];
-    [_zhanJianList addObject:model2];
 }
 
 

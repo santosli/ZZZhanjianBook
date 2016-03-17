@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		31D565306B82CC17693B16A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D06CE701A28EA431BB62F4 /* libPods.a */; };
+		6B5E0B891C9AD56C005E7E98 /* ZZZhanjianDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5E0B881C9AD56C005E7E98 /* ZZZhanjianDetailViewController.xib */; };
+		6B5E0B8C1C9AD591005E7E98 /* ZZZhanjianDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E0B8B1C9AD591005E7E98 /* ZZZhanjianDetailViewController.m */; };
+		6B5E0B8F1C9ADE2D005E7E98 /* ZZZhanjianDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E0B8E1C9ADE2D005E7E98 /* ZZZhanjianDetailModel.m */; };
 		6BBCC2D71C87DC6800DFD5C8 /* ZZHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCC2D61C87DC6800DFD5C8 /* ZZHTTPOperation.m */; };
 		6BE99EC81C8463DC001C7A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE99EC71C8463DC001C7A6C /* main.m */; };
 		6BE99ECB1C8463DC001C7A6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE99ECA1C8463DC001C7A6C /* AppDelegate.m */; };
@@ -38,6 +41,11 @@
 
 /* Begin PBXFileReference section */
 		48D06CE701A28EA431BB62F4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5E0B881C9AD56C005E7E98 /* ZZZhanjianDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZZhanjianDetailViewController.xib; sourceTree = "<group>"; };
+		6B5E0B8A1C9AD591005E7E98 /* ZZZhanjianDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZZhanjianDetailViewController.h; sourceTree = "<group>"; };
+		6B5E0B8B1C9AD591005E7E98 /* ZZZhanjianDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZZhanjianDetailViewController.m; sourceTree = "<group>"; };
+		6B5E0B8D1C9ADE2D005E7E98 /* ZZZhanjianDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZZhanjianDetailModel.h; sourceTree = "<group>"; };
+		6B5E0B8E1C9ADE2D005E7E98 /* ZZZhanjianDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZZhanjianDetailModel.m; sourceTree = "<group>"; };
 		6BBCC2D51C87DC6800DFD5C8 /* ZZHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHTTPOperation.h; sourceTree = "<group>"; };
 		6BBCC2D61C87DC6800DFD5C8 /* ZZHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHTTPOperation.m; sourceTree = "<group>"; };
 		6BE99EC31C8463DC001C7A6C /* ZZZhanjianBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZZhanjianBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +141,13 @@
 				6BBCC2D41C87DC1B00DFD5C8 /* ZZRequest */,
 				6BE99EFA1C8467AA001C7A6C /* ZZZhanjianListViewController.h */,
 				6BE99EFB1C8467AA001C7A6C /* ZZZhanjianListViewController.m */,
+				6B5E0B8A1C9AD591005E7E98 /* ZZZhanjianDetailViewController.h */,
+				6B5E0B8B1C9AD591005E7E98 /* ZZZhanjianDetailViewController.m */,
+				6B5E0B881C9AD56C005E7E98 /* ZZZhanjianDetailViewController.xib */,
 				6BE99EFD1C84695E001C7A6C /* ZZZhanjianModel.h */,
 				6BE99EFE1C84695E001C7A6C /* ZZZhanjianModel.m */,
+				6B5E0B8D1C9ADE2D005E7E98 /* ZZZhanjianDetailModel.h */,
+				6B5E0B8E1C9ADE2D005E7E98 /* ZZZhanjianDetailModel.m */,
 				6BE99ED21C8463DC001C7A6C /* Assets.xcassets */,
 				6BE99EC61C8463DC001C7A6C /* Supporting Files */,
 			);
@@ -288,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE99ED61C8463DC001C7A6C /* LaunchScreen.storyboard in Resources */,
+				6B5E0B891C9AD56C005E7E98 /* ZZZhanjianDetailViewController.xib in Resources */,
 				6BE99ED31C8463DC001C7A6C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +362,8 @@
 			files = (
 				6BE99EFF1C84695E001C7A6C /* ZZZhanjianModel.m in Sources */,
 				6BE99ECB1C8463DC001C7A6C /* AppDelegate.m in Sources */,
+				6B5E0B8F1C9ADE2D005E7E98 /* ZZZhanjianDetailModel.m in Sources */,
+				6B5E0B8C1C9AD591005E7E98 /* ZZZhanjianDetailViewController.m in Sources */,
 				6BE99EFC1C8467AA001C7A6C /* ZZZhanjianListViewController.m in Sources */,
 				6BE99EC81C8463DC001C7A6C /* main.m in Sources */,
 				6BBCC2D71C87DC6800DFD5C8 /* ZZHTTPOperation.m in Sources */,

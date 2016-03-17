@@ -7,6 +7,7 @@
 //
 
 #import "ZZZhanjianListViewController.h"
+#import "ZZZhanjianDetailViewController.h"
 #import "ZZZhanjianModel.h"
 #import "ZZHTTPOperation.h"
 
@@ -67,7 +68,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"UITableViewCell"];
     
     ZZZhanjianModel *model = _zhanJianList[indexPath.row];
     cell.textLabel.text = [model description];
@@ -75,4 +76,9 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    ZZZhanjianDetailViewController *detailViewController = [[ZZZhanjianDetailViewController alloc] init];
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
 @end
